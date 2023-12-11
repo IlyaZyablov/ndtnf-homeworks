@@ -31,7 +31,7 @@ export default abstract class BooksRepository {
     return result;
   }
 
-  static deleteBook(id: number): true | false {
+  static deleteBook(id: number): boolean {
     const bookIdx = this.books.findIndex(book => book.id === id);
 
     if (!bookIdx) return false;
